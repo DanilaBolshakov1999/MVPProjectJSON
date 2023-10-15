@@ -15,6 +15,8 @@
 		4418DE5D2ADC248100F9E345 /* MVPProjectJSONTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4418DE5C2ADC248100F9E345 /* MVPProjectJSONTests.swift */; };
 		4418DE672ADC248100F9E345 /* MVPProjectJSONUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4418DE662ADC248100F9E345 /* MVPProjectJSONUITests.swift */; };
 		4418DE692ADC248100F9E345 /* MVPProjectJSONUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4418DE682ADC248100F9E345 /* MVPProjectJSONUITestsLaunchTests.swift */; };
+		4418DE7B2ADC3A3500F9E345 /* ModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4418DE7A2ADC3A3500F9E345 /* ModuleBuilder.swift */; };
+		4418DE812ADC3CD500F9E345 /* ImagesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4418DE802ADC3CD500F9E345 /* ImagesModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		4418DE622ADC248100F9E345 /* MVPProjectJSONUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MVPProjectJSONUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4418DE662ADC248100F9E345 /* MVPProjectJSONUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVPProjectJSONUITests.swift; sourceTree = "<group>"; };
 		4418DE682ADC248100F9E345 /* MVPProjectJSONUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVPProjectJSONUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		4418DE7A2ADC3A3500F9E345 /* ModuleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleBuilder.swift; sourceTree = "<group>"; };
+		4418DE802ADC3CD500F9E345 /* ImagesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,8 +82,7 @@
 			isa = PBXGroup;
 			children = (
 				4418DE442ADC247F00F9E345 /* MVPProjectJSON */,
-				4418DE5B2ADC248100F9E345 /* MVPProjectJSONTests */,
-				4418DE652ADC248100F9E345 /* MVPProjectJSONUITests */,
+				4418DE792ADC39C600F9E345 /* Tests */,
 				4418DE432ADC247F00F9E345 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -129,6 +132,7 @@
 			children = (
 				4418DE452ADC247F00F9E345 /* AppDelegate.swift */,
 				4418DE472ADC247F00F9E345 /* SceneDelegate.swift */,
+				4418DE7A2ADC3A3500F9E345 /* ModuleBuilder.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -152,8 +156,50 @@
 		4418DE782ADC33A900F9E345 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				4418DE7C2ADC3A8700F9E345 /* MainModule */,
 			);
 			path = Modules;
+			sourceTree = "<group>";
+		};
+		4418DE792ADC39C600F9E345 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				4418DE5B2ADC248100F9E345 /* MVPProjectJSONTests */,
+				4418DE652ADC248100F9E345 /* MVPProjectJSONUITests */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		4418DE7C2ADC3A8700F9E345 /* MainModule */ = {
+			isa = PBXGroup;
+			children = (
+				4418DE7D2ADC3A8C00F9E345 /* Model */,
+				4418DE7E2ADC3A9C00F9E345 /* View */,
+				4418DE7F2ADC3AE400F9E345 /* Presenter */,
+			);
+			path = MainModule;
+			sourceTree = "<group>";
+		};
+		4418DE7D2ADC3A8C00F9E345 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4418DE802ADC3CD500F9E345 /* ImagesModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		4418DE7E2ADC3A9C00F9E345 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		4418DE7F2ADC3AE400F9E345 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presenter;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -287,8 +333,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				4418DE4A2ADC247F00F9E345 /* ViewController.swift in Sources */,
+				4418DE812ADC3CD500F9E345 /* ImagesModel.swift in Sources */,
 				4418DE462ADC247F00F9E345 /* AppDelegate.swift in Sources */,
 				4418DE482ADC247F00F9E345 /* SceneDelegate.swift in Sources */,
+				4418DE7B2ADC3A3500F9E345 /* ModuleBuilder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
