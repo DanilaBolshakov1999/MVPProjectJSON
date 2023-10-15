@@ -17,6 +17,7 @@
 		4418DE692ADC248100F9E345 /* MVPProjectJSONUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4418DE682ADC248100F9E345 /* MVPProjectJSONUITestsLaunchTests.swift */; };
 		4418DE7B2ADC3A3500F9E345 /* ModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4418DE7A2ADC3A3500F9E345 /* ModuleBuilder.swift */; };
 		4418DE812ADC3CD500F9E345 /* ImagesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4418DE802ADC3CD500F9E345 /* ImagesModel.swift */; };
+		4418DE832ADC417500F9E345 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4418DE822ADC417500F9E345 /* NetworkService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		4418DE682ADC248100F9E345 /* MVPProjectJSONUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVPProjectJSONUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		4418DE7A2ADC3A3500F9E345 /* ModuleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleBuilder.swift; sourceTree = "<group>"; };
 		4418DE802ADC3CD500F9E345 /* ImagesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesModel.swift; sourceTree = "<group>"; };
+		4418DE822ADC417500F9E345 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,6 +151,7 @@
 		4418DE772ADC2D2E00F9E345 /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				4418DE822ADC417500F9E345 /* NetworkService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -336,6 +339,7 @@
 				4418DE812ADC3CD500F9E345 /* ImagesModel.swift in Sources */,
 				4418DE462ADC247F00F9E345 /* AppDelegate.swift in Sources */,
 				4418DE482ADC247F00F9E345 /* SceneDelegate.swift in Sources */,
+				4418DE832ADC417500F9E345 /* NetworkService.swift in Sources */,
 				4418DE7B2ADC3A3500F9E345 /* ModuleBuilder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
