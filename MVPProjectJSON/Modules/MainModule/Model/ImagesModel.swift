@@ -5,11 +5,9 @@
 //  Created by iOS - Developer on 15.10.2023.
 //
 
-import Foundation
-
 //MARK: - ImagesModel
 struct ImagesModel: Decodable {
-    let breeds: Breeds
+    //let breeds: Breeds
     let id: String
     let url: String
     let width: Int

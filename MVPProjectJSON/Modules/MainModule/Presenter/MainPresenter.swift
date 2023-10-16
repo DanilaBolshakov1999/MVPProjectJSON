@@ -10,29 +10,34 @@ import Foundation
 //MARK: - MainViewPresenterProtocol
 protocol MainViewPresenterProtocol: AnyObject {
     var imagesModel: [ImagesModel]? { get set }
-    func getComments()
+    func getNetwork()
     func didLoad()
 }
 
 //MARK: - MainPresenter
 final class MainPresenter: MainViewPresenterProtocol {
-    weak var view: MainViewProtocol?
+    
+    weak var view: (MainViewProtocol)?
     let networkService: NetworkServiceTable
     var imagesModel: [ImagesModel]?
     
     //MARK: - init
-    init(view: MainViewProtocol? = nil, networkService: NetworkServiceTable) {
+    init(view: MainViewProtocol, networkService: NetworkServiceTable) {
         self.view = view
         self.networkService = networkService
     }
     
-    func getComments() {
+    func getNetwork() {
         didLoad()
     }
     
     func didLoad() {
-        networkService.getComment(numberLimit: 10) { [ weak self ] result in
+        networkService.getSetup(numberLimit: 10) { [ weak self ] result in
             guard let self = self else { return }
+            
+            defer { // после отработки func
+                view?.hideActivityIndicator()
+            }
             
             DispatchQueue.main.async {
                 switch result {
