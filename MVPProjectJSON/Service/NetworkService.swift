@@ -12,17 +12,17 @@ protocol NetworkServiceProtocol {
     func getComment(numberLimit: Int, completion: @escaping (Result<[ImagesModel]?, Error>) -> Void)
 }
 
+//MARK: - NetworkServiceTable
 final class NetworkServiceTable: NetworkServiceProtocol {
     
     //MARK: - Private Propirties
-    private let baseURL = "https://api.thecatapi.com/v1/images/search"
-    private let limitString = "?limit="
-    private let apiKeyString = "&api_key="
-    private let apiKey = "live_B2ZnG91wVZ2PDfZ0MHM8CfwLMqLO4ThjweHJqrHMBofVMon934k33YUX0dCVzaqw"
+    private let baseURL = "https://"
+    private let apiKey = ""
     
     //MARK: - JSONDecoder
     func getComment(numberLimit: Int, completion: @escaping (Result<[ImagesModel]?, Error>) -> Void) {
-        let urlString = baseURL + limitString + "\(10)" + apiKeyString + apiKey
+        let queryString = "?limit=\(numberLimit)&apiKey=\(apiKey)"
+        let urlString = baseURL + queryString
         guard let url = URL(string: urlString) else { return }
         
         URLSession.shared.dataTask(with: url) { data, response, fetchError in

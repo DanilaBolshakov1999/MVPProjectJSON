@@ -18,6 +18,10 @@
 		4418DE7B2ADC3A3500F9E345 /* ModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4418DE7A2ADC3A3500F9E345 /* ModuleBuilder.swift */; };
 		4418DE812ADC3CD500F9E345 /* ImagesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4418DE802ADC3CD500F9E345 /* ImagesModel.swift */; };
 		4418DE832ADC417500F9E345 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4418DE822ADC417500F9E345 /* NetworkService.swift */; };
+		4418DE852ADC49C200F9E345 /* MainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4418DE842ADC49C200F9E345 /* MainPresenter.swift */; };
+		4418DE8B2ADC4CD100F9E345 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4418DE8A2ADC4CD100F9E345 /* MainViewController.swift */; };
+		4418DE8D2ADC4CE300F9E345 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4418DE8C2ADC4CE300F9E345 /* DetailViewController.swift */; };
+		4418DE8F2ADC4F0800F9E345 /* DetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4418DE8E2ADC4F0800F9E345 /* DetailPresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +57,10 @@
 		4418DE7A2ADC3A3500F9E345 /* ModuleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleBuilder.swift; sourceTree = "<group>"; };
 		4418DE802ADC3CD500F9E345 /* ImagesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesModel.swift; sourceTree = "<group>"; };
 		4418DE822ADC417500F9E345 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		4418DE842ADC49C200F9E345 /* MainPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenter.swift; sourceTree = "<group>"; };
+		4418DE8A2ADC4CD100F9E345 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		4418DE8C2ADC4CE300F9E345 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		4418DE8E2ADC4F0800F9E345 /* DetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPresenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,6 +168,7 @@
 			isa = PBXGroup;
 			children = (
 				4418DE7C2ADC3A8700F9E345 /* MainModule */,
+				4418DE862ADC4C6C00F9E345 /* DetailModule */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -194,6 +203,7 @@
 		4418DE7E2ADC3A9C00F9E345 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				4418DE8A2ADC4CD100F9E345 /* MainViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -201,8 +211,42 @@
 		4418DE7F2ADC3AE400F9E345 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
+				4418DE842ADC49C200F9E345 /* MainPresenter.swift */,
 			);
 			path = Presenter;
+			sourceTree = "<group>";
+		};
+		4418DE862ADC4C6C00F9E345 /* DetailModule */ = {
+			isa = PBXGroup;
+			children = (
+				4418DE892ADC4CA500F9E345 /* Model */,
+				4418DE882ADC4C9B00F9E345 /* View */,
+				4418DE872ADC4C9000F9E345 /* Presenter */,
+			);
+			path = DetailModule;
+			sourceTree = "<group>";
+		};
+		4418DE872ADC4C9000F9E345 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				4418DE8E2ADC4F0800F9E345 /* DetailPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		4418DE882ADC4C9B00F9E345 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4418DE8C2ADC4CE300F9E345 /* DetailViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		4418DE892ADC4CA500F9E345 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -335,12 +379,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4418DE8D2ADC4CE300F9E345 /* DetailViewController.swift in Sources */,
 				4418DE4A2ADC247F00F9E345 /* ViewController.swift in Sources */,
 				4418DE812ADC3CD500F9E345 /* ImagesModel.swift in Sources */,
+				4418DE8F2ADC4F0800F9E345 /* DetailPresenter.swift in Sources */,
 				4418DE462ADC247F00F9E345 /* AppDelegate.swift in Sources */,
 				4418DE482ADC247F00F9E345 /* SceneDelegate.swift in Sources */,
 				4418DE832ADC417500F9E345 /* NetworkService.swift in Sources */,
+				4418DE852ADC49C200F9E345 /* MainPresenter.swift in Sources */,
 				4418DE7B2ADC3A3500F9E345 /* ModuleBuilder.swift in Sources */,
+				4418DE8B2ADC4CD100F9E345 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
