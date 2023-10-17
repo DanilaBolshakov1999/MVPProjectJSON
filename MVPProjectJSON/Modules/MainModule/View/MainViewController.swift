@@ -19,7 +19,6 @@ final class MainViewController: UIViewController {
     //MARK: - UI
     private lazy var tableView: UITableView = {
         let table = UITableView()
-        table.backgroundColor = .lightGray
         table.translatesAutoresizingMaskIntoConstraints = false
         return table
     }()
@@ -37,6 +36,8 @@ final class MainViewController: UIViewController {
         return indicator
     }()
     
+    private let images = ModelSingleton.shared
+    
     var presenter: MainViewPresenterProtocol? //Свойство *с типом* протокола
     
     //MARK: - Life Cycle
@@ -48,6 +49,10 @@ final class MainViewController: UIViewController {
         tableView.delegate = self
         presenter?.didLoad()
         view.backgroundColor = .white
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
     }
     
     private func setupViews() {
@@ -66,7 +71,9 @@ extension MainViewController: MainViewProtocol {
     }
     
     func succes() {
-        tableView.reloadData()
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+        }
     }
     
     func failure(error: Error) {
@@ -95,6 +102,23 @@ extension MainViewController: UITableViewDelegate {
         let images = presenter?.imagesModel?[indexPath.row]
         let detailViewController = ModuleBuilder.createDetailModule(images: images)
         navigationController?.pushViewController(detailViewController, animated: true)
+    }
+    
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let deleteAction = UIContextualAction(style: .destructive, title: "Delete") { contextAction, view, boolValue in
+            let cell = tableView.cellForRow(at: indexPath) as? UITableViewCell
+            let title = cell?.textLabel?.text
+            self.images.removeData(id: title ?? "")
+            
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
+        }
+        deleteAction.backgroundColor = .systemRed
+        deleteAction.image = UIImage(systemName: "trash.fill")
+        
+        let swipeAction = UISwipeActionsConfiguration(actions: [deleteAction])
+        return swipeAction
     }
 }
 

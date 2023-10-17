@@ -21,6 +21,7 @@
 		4418DE8B2ADC4CD100F9E345 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4418DE8A2ADC4CD100F9E345 /* MainViewController.swift */; };
 		4418DE8D2ADC4CE300F9E345 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4418DE8C2ADC4CE300F9E345 /* DetailViewController.swift */; };
 		4418DE8F2ADC4F0800F9E345 /* DetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4418DE8E2ADC4F0800F9E345 /* DetailPresenter.swift */; };
+		441AE3692ADE82C500376A9D /* Singleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 441AE3682ADE82C500376A9D /* Singleton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		4418DE8A2ADC4CD100F9E345 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		4418DE8C2ADC4CE300F9E345 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		4418DE8E2ADC4F0800F9E345 /* DetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPresenter.swift; sourceTree = "<group>"; };
+		441AE3682ADE82C500376A9D /* Singleton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Singleton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -242,6 +244,7 @@
 		4418DE892ADC4CA500F9E345 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				441AE3682ADE82C500376A9D /* Singleton.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -379,6 +382,7 @@
 				4418DE8D2ADC4CE300F9E345 /* DetailViewController.swift in Sources */,
 				4418DE812ADC3CD500F9E345 /* ImagesModel.swift in Sources */,
 				4418DE8F2ADC4F0800F9E345 /* DetailPresenter.swift in Sources */,
+				441AE3692ADE82C500376A9D /* Singleton.swift in Sources */,
 				4418DE462ADC247F00F9E345 /* AppDelegate.swift in Sources */,
 				4418DE482ADC247F00F9E345 /* SceneDelegate.swift in Sources */,
 				4418DE832ADC417500F9E345 /* NetworkService.swift in Sources */,
