@@ -30,5 +30,4 @@ final class ModuleBuilder: Builder {
         view.presenter = present
         return view
     }
-    
 }
