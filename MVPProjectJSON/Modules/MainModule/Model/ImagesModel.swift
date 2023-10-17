@@ -7,7 +7,6 @@
 
 //MARK: - ImagesModel
 struct ImagesModel: Decodable {
-    let breeds: Breeds
     let id: String
     let url: String
     let width: Int
